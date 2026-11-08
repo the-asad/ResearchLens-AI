@@ -1,0 +1,49 @@
+{
+  "name": "researchlens-ai",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "test:rls": "bash supabase/tests/run.sh",
+    "test:ai-live": "vitest run --config vitest.live.config.mts",
+    "eval:rag": "tsx --conditions=react-server --env-file=.env.local scripts/eval-rag.mts",
+    "inspect:pdf": "tsx scripts/inspect-pdf.mts",
+    "inspect:chunks": "tsx scripts/inspect-chunks.mts"
+  },
+  "dependencies": {
+    "@supabase/ssr": "^0.12.7",
+    "@supabase/supabase-js": "^2.119.0",
+    "clsx": "^2.1.1",
+    "lucide-react": "^1.70.0",
+    "next": "16.4.5",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "server-only": "^0.0.1",
+    "tailwind-merge": "^3.7.0",
+    "unpdf": "^2.1.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@huggingface/transformers": "^4.3.2",
+    "@tailwindcss/turbopack": "^4",
+    "@types/node": "^24.19.2",
+    "@types/pg": "^8.23.1",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.4.5",
+    "pg": "^8.23.1",
+    "tailwindcss": "^4",
+    "tsx": "^4.23.15",
+    "typescript": "^5",
+    "vitest": "^5.1.0"
+  },
+  "engines": {
+    "node": ">=20.9.0"
+  }
+}

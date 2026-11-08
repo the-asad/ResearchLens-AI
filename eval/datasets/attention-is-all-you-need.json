@@ -1,0 +1,24 @@
+{
+  "paper": "Attention Is All You Need",
+  "source": "arXiv:1706.03762 (v7). Labels written by hand against the paper text; review before relying on them.",
+  "labeling": "A chunk is relevant if its page range overlaps `pages` AND its content contains at least one `evidence` string. Content-anchored labels survive re-chunking.",
+  "questions": [
+    { "id": "A1", "scenario": "A: answer in one chunk", "question": "How many identical layers does the encoder stack have?", "pages": [3], "evidence": ["N = 6"], "answer_contains": ["6"] },
+    { "id": "A2", "scenario": "A: answer in one chunk", "question": "Which optimizer was used for training, and with what beta values?", "pages": [7], "evidence": ["Adam optimizer"], "answer_contains": ["Adam", "0.98"] },
+    { "id": "A3", "scenario": "A: answer in one chunk", "question": "What BLEU score does the big Transformer reach on WMT 2014 English-to-German?", "pages": [8], "evidence": ["28.4"], "answer_contains": ["28.4"] },
+    { "id": "A4", "scenario": "A: answer in one chunk", "question": "What hardware were the models trained on?", "pages": [7], "evidence": ["8 NVIDIA P100 GPUs"], "answer_contains": ["P100"] },
+    { "id": "B1", "scenario": "B: paraphrased wording", "question": "Why do the authors shrink the query-key products before applying the softmax?", "pages": [4], "evidence": ["small gradients"], "answer_contains": ["gradient"] },
+    { "id": "B2", "scenario": "B: paraphrased wording", "question": "Without recurrence or convolution, how does the network know where each token sits in the sentence?", "pages": [6], "evidence": ["positional encodings"], "answer_contains": ["positional"] },
+    { "id": "B3", "scenario": "B: paraphrased wording", "question": "How long did it take to train the large model?", "pages": [7], "evidence": ["3.5 days"], "answer_contains": ["3.5 days"] },
+    { "id": "C1", "scenario": "C: exact technical identifier", "question": "What value was used for warmup_steps?", "pages": [7], "evidence": ["warmup_steps = 4000"], "answer_contains": ["4000"] },
+    { "id": "C2", "scenario": "C: exact technical identifier", "question": "What P_drop rate was used for the base model?", "pages": [7, 8], "evidence": ["P_drop = 0.1"], "answer_contains": ["0.1"] },
+    { "id": "C3", "scenario": "C: exact technical identifier", "question": "What F1 does the Transformer get on WSJ Section 23 in the semi-supervised setting?", "pages": [9, 10], "evidence": ["92.7"], "answer_contains": ["92.7"] },
+    { "id": "D1", "scenario": "D: answer spans neighbouring text", "question": "What regularization techniques were used during training and with what values?", "pages": [7, 8], "evidence": ["Residual Dropout", "Label Smoothing"], "answer_contains": ["dropout", "label smoothing"] },
+    { "id": "F1", "scenario": "F: many semantically similar distractors", "question": "Which of the two common attention functions is faster in practice, and why?", "pages": [4], "evidence": ["faster and more space-efficient"], "answer_contains": ["dot-product"] },
+    { "id": "G1", "scenario": "G: same fact stated in several places", "question": "What BLEU score does the model achieve on English-to-French translation?", "pages": [1, 7, 8], "evidence": ["41.8", "41.0"], "answer_contains": ["41"] },
+    { "id": "E1", "scenario": "E: not in the paper (must abstain)", "question": "What top-1 accuracy does the Transformer achieve on ImageNet classification?", "unanswerable": true },
+    { "id": "E2", "scenario": "E: not in the paper (must abstain)", "question": "How many parameters does GPT-4 have?", "unanswerable": true },
+    { "id": "E3", "scenario": "E: not in the paper (must abstain)", "question": "What word error rate did the Transformer reach on LibriSpeech speech recognition?", "unanswerable": true },
+    { "id": "E4", "scenario": "E: not in the paper (must abstain)", "question": "Which reinforcement learning algorithm was used to fine-tune the model with human feedback?", "unanswerable": true }
+  ]
+}

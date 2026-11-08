@@ -1,0 +1,20 @@
+{
+  "name": "researchlens-lm-attention-v1",
+  "description": "Internal multi-paper benchmark corpus: transformer pre-training and efficient-attention papers chosen for overlapping terminology, competing methods, explicit disagreements (e.g. next-sentence prediction), table-heavy results, figures, equations, two-column layouts and one very long paper. This is an INTERNAL benchmark, not an industry-standard one.",
+  "license_note": "PDFs are downloaded from arXiv for local evaluation only and are git-ignored; only this manifest is committed.",
+  "papers": [
+    { "key": "transformer", "arxiv": "1706.03762", "title": "Attention Is All You Need", "authors": "Vaswani et al.", "year": 2017, "domain": "architecture", "traits": ["equations", "tables", "figures"] },
+    { "key": "bert", "arxiv": "1810.04805", "title": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding", "authors": "Devlin et al.", "year": 2018, "domain": "pre-training", "traits": ["two-column", "tables", "figures"] },
+    { "key": "transformer_xl", "arxiv": "1901.02860", "title": "Transformer-XL: Attentive Language Models Beyond a Fixed-Length Context", "authors": "Dai et al.", "year": 2019, "domain": "architecture", "traits": ["two-column", "tables", "figure-heavy"] },
+    { "key": "xlnet", "arxiv": "1906.08237", "title": "XLNet: Generalized Autoregressive Pretraining for Language Understanding", "authors": "Yang et al.", "year": 2019, "domain": "pre-training", "traits": ["equations", "tables"] },
+    { "key": "roberta", "arxiv": "1907.11692", "title": "RoBERTa: A Robustly Optimized BERT Pretraining Approach", "authors": "Liu et al.", "year": 2019, "domain": "pre-training", "traits": ["tables", "disagrees-with-bert"] },
+    { "key": "albert", "arxiv": "1909.11942", "title": "ALBERT: A Lite BERT for Self-supervised Learning of Language Representations", "authors": "Lan et al.", "year": 2019, "domain": "pre-training", "traits": ["tables", "disagrees-with-bert"] },
+    { "key": "distilbert", "arxiv": "1910.01108", "title": "DistilBERT, a distilled version of BERT: smaller, faster, cheaper and lighter", "authors": "Sanh et al.", "year": 2019, "domain": "compression", "traits": ["short", "tables"] },
+    { "key": "t5", "arxiv": "1910.10683", "title": "Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer", "authors": "Raffel et al.", "year": 2019, "domain": "pre-training", "traits": ["very-long", "table-heavy", "figures"] },
+    { "key": "reformer", "arxiv": "2001.04451", "title": "Reformer: The Efficient Transformer", "authors": "Kitaev et al.", "year": 2020, "domain": "efficient-attention", "traits": ["equations", "figures"] },
+    { "key": "electra", "arxiv": "2003.10555", "title": "ELECTRA: Pre-training Text Encoders as Discriminators Rather Than Generators", "authors": "Clark et al.", "year": 2020, "domain": "pre-training", "traits": ["figures", "tables"] },
+    { "key": "longformer", "arxiv": "2004.05150", "title": "Longformer: The Long-Document Transformer", "authors": "Beltagy et al.", "year": 2020, "domain": "efficient-attention", "traits": ["tables", "figures"] },
+    { "key": "linformer", "arxiv": "2006.04768", "title": "Linformer: Self-Attention with Linear Complexity", "authors": "Wang et al.", "year": 2020, "domain": "efficient-attention", "traits": ["equations", "graphs"] },
+    { "key": "performer", "arxiv": "2009.14794", "title": "Rethinking Attention with Performers", "authors": "Choromanski et al.", "year": 2020, "domain": "efficient-attention", "traits": ["equations", "graphs", "long"] }
+  ]
+}

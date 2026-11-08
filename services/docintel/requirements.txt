@@ -1,0 +1,8 @@
+# ResearchLens document-intelligence worker (Python ≥ 3.12; tested on 3.14.7).
+# Direct dependencies only, pinned to the versions used for the Milestone 3 benchmark.
+# System dependency for OCR: Tesseract ≥ 5 with English data (macOS: brew install tesseract;
+# Debian/Ubuntu: apt-get install tesseract-ocr tesseract-ocr-eng). Tested with 5.5.3.
+# Docling downloads its layout / TableFormer model weights from Hugging Face on first run.
+docling==2.148.0
+pypdfium2==5.15.0
+pillow==13.0.0
